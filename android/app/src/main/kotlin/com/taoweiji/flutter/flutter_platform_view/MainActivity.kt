@@ -8,8 +8,10 @@ import io.flutter.plugins.GeneratedPluginRegistrant
 
 class MainActivity : FlutterActivity() {
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
-        GeneratedPluginRegistrant.registerWith(flutterEngine)
+        /*GeneratedPluginRegistrant.registerWith(flutterEngine)
         val registry = flutterEngine.platformViewsController.registry
-        registry.registerViewFactory("platform_text_view", AndroidTextViewFactory())
+        registry.registerViewFactory("platform_text_view", AndroidTextViewFactory())*/
+
+        flutterEngine.plugins.add(MyPluginRegistrant())
     }
 }
